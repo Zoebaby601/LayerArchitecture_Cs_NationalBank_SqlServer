@@ -1,0 +1,18 @@
+-- This project uses the following licenses:
+-- MIT License
+-- Copyright (c) 2018 Ricardo Mendoza 
+-- Montréal Québec Canada
+
+Description - In this project we will develop a Bank Application able to make Deposit, Withdraw and Consult. The app will be handle by an admin to administrate directors, agencies, customers, the diferent accounts and reports. The app will includ concepts of Object Oriented Programming, concepts of layer architecture, database with Sql Server and relationship between classes in C # .NET.
+https://github.com/RicardoAMendoza/LayerArchitecture_Cs_NationalBank_SqlServer.git
+
+-- TITLE
+1. create repository in GitHub : LayerArchitecture_Cs_NationalBank_SqlServer
+2. create file : prjWin_MVC_NationalBank_SqlServer_Rm
+3. open git Bash
+4. create README.md inside prjWin_MVC_NationalBank_SqlServer_Rm
+   git init
+5. git add README.md
+6. git commit -m "first commit"
+7. git remote add origin https://github.com/RicardoAMendoza/LayerArchitecture_Cs_NationalBank_SqlServer.git
+8. git push -u origin master
