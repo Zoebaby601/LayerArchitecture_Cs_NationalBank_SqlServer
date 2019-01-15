@@ -52,7 +52,7 @@ With C# and Visual Studio the class diagram is implemented.
 
  * [Install Visual Studio](https://visualstudio.microsoft.com/)
  * [Install SQL Server](https://www.microsoft.com/en-ca/sql-server/sql-server-downloads)
- * [Dowland the MVC NationalBank SqlServer project](https://github.com/RicardoAMendoza/LayerArchitecture_Cs_NationalBank_SqlServer)
+ * [Dowland the Layer Architecture NationalBank SqlServer project](https://github.com/RicardoAMendoza/LayerArchitecture_Cs_NationalBank_SqlServer)
  
  
 ### Create the database with SQl server. 
