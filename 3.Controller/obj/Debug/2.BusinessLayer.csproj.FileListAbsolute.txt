@@ -1,0 +1,9 @@
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\bin\Debug\3.Controller.dll
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\bin\Debug\3.Controller.pdb
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\bin\Debug\1.Model.dll
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\bin\Debug\4.Items.dll
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\bin\Debug\1.Model.pdb
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\bin\Debug\4.Items.pdb
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\obj\Debug\2.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\obj\Debug\3.Controller.dll
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\3.Controller\obj\Debug\3.Controller.pdb

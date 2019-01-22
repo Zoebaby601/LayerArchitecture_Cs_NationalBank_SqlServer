@@ -8,11 +8,11 @@ using System.Windows.Forms; // MsgBox
 using System.Data;
 using System.Data.SqlClient;
 // Handle Data
-using _1.Model;
+using _3.DataAccesLayer;
 // Handle Items
 using _4.Items;
 
-namespace _3.Controller
+namespace _2.BusinessLayer
 {
     /*
     * This project uses the following licenses:

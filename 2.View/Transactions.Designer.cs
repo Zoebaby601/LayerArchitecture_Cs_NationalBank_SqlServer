@@ -1,4 +1,4 @@
-﻿namespace _2.View
+﻿namespace _1.PresentationLayer
 {
     partial class Transactions
     {

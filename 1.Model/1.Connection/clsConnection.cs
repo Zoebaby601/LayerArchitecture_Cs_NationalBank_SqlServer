@@ -8,7 +8,7 @@ using System.Windows.Forms; // Message Box
 using System.Data;
 using System.Data.SqlClient;
 
-namespace _1.Model
+namespace _3.DataAccesLayer
 {
     /*
     * This project uses the following licenses:

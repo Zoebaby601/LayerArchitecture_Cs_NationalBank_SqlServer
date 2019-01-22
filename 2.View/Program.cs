@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2.View
+namespace _1.PresentationLayer
 {
     static class Program
     {

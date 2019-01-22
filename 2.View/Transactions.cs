@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 // Handle decisions
-using _3.Controller;
+using _2.BusinessLayer;
 // Handle Items
 using _4.Items;
 
 
-namespace _2.View
+namespace _1.PresentationLayer
 {
     public partial class Transactions : Form
     {

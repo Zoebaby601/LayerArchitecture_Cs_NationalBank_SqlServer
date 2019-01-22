@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using _4.Items;
 
-namespace _1.Model
+namespace _3.DataAccesLayer
 {
     /*
      * This project uses the following licenses:
