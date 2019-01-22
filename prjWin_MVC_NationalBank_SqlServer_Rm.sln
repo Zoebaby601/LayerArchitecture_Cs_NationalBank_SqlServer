@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.Model", "1.Model\1.Model.csproj", "{7AED6D05-9DA0-41A4-B8CD-99DC65C7F4F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.DataAccesLayer", "1.Model\3.DataAccesLayer.csproj", "{7AED6D05-9DA0-41A4-B8CD-99DC65C7F4F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.Controller", "3.Controller\3.Controller.csproj", "{78BDD708-5A83-4EEC-96C8-41EF2237EAFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.BusinessLayer", "3.Controller\2.BusinessLayer.csproj", "{78BDD708-5A83-4EEC-96C8-41EF2237EAFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.View", "2.View\2.View.csproj", "{DA2D457C-6340-4BCD-9E2C-3725EBEB7E0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.PresentationLayer", "2.View\1.PresentationLayer.csproj", "{DA2D457C-6340-4BCD-9E2C-3725EBEB7E0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Items", "4.Items\4.Items.csproj", "{C6E140AB-D8B2-409A-9266-AD230BBA74B4}"
 EndProject
