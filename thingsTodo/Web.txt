@@ -1,8 +1,5 @@
 In this project we will develop a Bank Application able to make Deposit, Withdraw and Consult. The app will be handle by an admin to administrate directors, agencies, customers, the diferent accounts and reports. The app will includ concepts of Object Oriented Programming, concepts of layer architecture, database with Sql Server and relationship between classes in C # .NET.
 
-
-
-
 CRUD con NCapas C# y SQL - Insertar, Mostrar, Editar y Eliminar datos (POO) RV2
 https://www.youtube.com/watch?v=_H8vswpMSOw&t=658s
 
