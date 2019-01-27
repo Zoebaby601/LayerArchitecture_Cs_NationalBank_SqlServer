@@ -569,3 +569,109 @@ BEGIN
 SELECT * FROM qClients WHERE @aNumber = Number
 END
 GO
+
+-- =============================================
+-- Author:		Ricardo Mendoza
+-- Create date: 26-01-2019
+-- Description:	Select client account by client name from bd_NationalBank
+-- 17.- selectAccountByClient
+-- =============================================
+USE bd_NationalBank
+GO
+
+CREATE PROCEDURE selectAccountByClientandAccountType
+@aaccountType VARCHAR(45) = null, -- 'PaidAccount'
+@alastName VARCHAR(45) = null
+AS
+DECLARE @valid FLOAT; -- IMPORTANT REMARKS THE DECIMALS
+SET @valid = (select comission from taccounttype where accountType = @aaccountType); -- 'PaidAccount' comission = 0 
+BEGIN
+IF @valid = 0 -- 'PaidAccount' comission = 0 
+	SELECT
+	a.clientNumber as 'ID Client',
+	concat (a.name,' ', a.lastName) as Client,
+	h.employeeNumber as 'ID Employee',
+	concat(h.name,' ', h.lastName) as Employee,
+	h.hiringDate as [Hiring Date],
+	h.img as 'Photo',
+	-- ----------------------------------------
+	d.accountType as 'Type account',
+	c.number as 'Number',
+	-- taccounttype  --------------------------
+	d.interestRate as 'Interest', -- 'PaidAccount' comission = 0 
+	-- taccount  ------------------------------
+	c.balance as 'Balance',
+	c.openDate as 'Open Date'
+	FROM tclient a LEFT JOIN tclient_account b ON a.idclient=b.idclient 
+	LEFT JOIN taccounttype d ON b.idaccounttype = d.idaccounttype 
+	LEFT JOIN taccount c ON b.idaccount=c.idaccount
+	LEFT JOIN temployee h ON a.idemployee = h.idemployee
+	WHERE a.lastName = @alastName  AND d.accountType = @aaccountType
+ELSE
+	SELECT
+	a.clientNumber as 'ID Client',
+	concat (a.name,' ', a.lastName) as Client,
+	h.employeeNumber as 'ID Employee',
+	concat(h.name,' ', h.lastName) as Employee,
+	h.hiringDate as [Hiring Date],
+	h.img as 'Photo',
+	-- ----------------------------------------
+	d.accountType as 'Type account',
+	c.number as 'Number',
+	-- taccounttype  --------------------------
+	d.comission as 'Comission',   -- UnPaidAccount
+	-- NOTE : comission NEVER CAN BE 0
+    d.overdraft as 'Overdraft',   -- UnPaidAccount
+	-- taccount  ------------------------------
+	c.balance as 'Balance',
+	c.openDate as 'Open Date'
+	FROM tclient a LEFT JOIN tclient_account b ON a.idclient=b.idclient 
+	LEFT JOIN taccounttype d ON b.idaccounttype = d.idaccounttype 
+	LEFT JOIN taccount c ON b.idaccount=c.idaccount
+	LEFT JOIN temployee h ON a.idemployee = h.idemployee
+	WHERE a.lastName = @alastName  AND d.accountType = @aaccountType
+END
+GO
+
+--Exec selectAccountByClient
+--@alastName = 'Winfreh',
+--@aaccountType   = 'UnPaidAccount'
+
+-- =============================================
+-- Author:		Ricardo Mendoza
+-- Create date: 26-01-2019
+-- Description:	Select accounts by client name from bd_NationalBank
+-- 18.- selectAccountByClient
+-- =============================================
+CREATE PROCEDURE selectAccountsByClient
+@alastName VARCHAR(45) = null
+AS
+BEGIN
+	SELECT
+	a.clientNumber as 'ID Client',
+	concat (a.name,' ', a.lastName) as Client,
+	h.employeeNumber as 'ID Employee',
+	concat(h.name,' ', h.lastName) as Employee,
+	h.hiringDate as [Hiring Date],
+	h.img as 'Photo',
+	-- ----------------------------------------
+	d.accountType as 'Type account',
+	c.number as 'Number',
+	-- taccounttype  --------------------------
+	d.interestRate as 'Interest', -- PaidAccount
+	-- NOTE : comission NEVER CAN BE 0
+	d.comission as 'Comission',   -- UnPaidAccount
+    d.overdraft as 'Overdraft',   -- UnPaidAccount
+	-- taccount  ------------------------------
+	c.balance as 'Balance',
+	c.openDate as 'Open Date'
+	FROM tclient a LEFT JOIN tclient_account b ON a.idclient=b.idclient 
+	LEFT JOIN taccounttype d ON b.idaccounttype = d.idaccounttype 
+	LEFT JOIN taccount c ON b.idaccount=c.idaccount
+	LEFT JOIN temployee h ON a.idemployee = h.idemployee
+	WHERE a.lastName = @alastName
+END
+GO
+
+-- Exec selectAccountsByClient
+-- @alastName = 'Winfreh'

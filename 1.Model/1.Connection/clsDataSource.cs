@@ -26,8 +26,54 @@ namespace _3.DataAccesLayer
         // 3. Read Rows
         private SqlDataReader Read;
 
-        // 4 fnc.Load Durectors
-        public clsListDirectors fncGetDirectors()
+        // 4 fnc.Load Directors
+        //public clsListDirectors fncGetDirectors()
+        //{
+        //    try
+        //    {
+        //        // 1. Objet clsListDirectors
+        //        clsListDirectors ListDirectors = new clsListDirectors();
+        //        // 2. Execute open connection
+        //        Command.Connection = Connection.OpenConnection();
+        //        // 3. Execute stored procedure
+        //        Command.CommandText = "selectDirectors";
+        //        // 4. Execute specify the command type
+        //        Command.CommandType = CommandType.StoredProcedure;
+        //        // 5. Execute the Reader
+        //        Read = Command.ExecuteReader();
+        //        // 6. Load the list
+        //        while (Read.Read())
+        //        {
+        //            // variables 
+        //            string number, name, lastName, email, img, sexe, active;
+        //            int iddirector, idbank;
+        //            decimal salary;
+        //            iddirector = Read.GetInt32(Read.GetOrdinal("iddirector"));
+        //            idbank = Read.GetInt32(Read.GetOrdinal("idbank"));
+        //            number = Read.GetString(Read.GetOrdinal("Number"));
+        //            name = Read.GetString(Read.GetOrdinal("Name"));
+        //            lastName = Read.GetString(Read.GetOrdinal("Last Name"));
+        //            email = Read.GetString(Read.GetOrdinal("Email"));
+        //            img = Read.GetString(Read.GetOrdinal("img"));
+        //            salary = Read.GetDecimal(Read.GetOrdinal("salary"));
+        //            sexe = Read.GetString(Read.GetOrdinal("sexe"));
+        //            active = Read.GetString(Read.GetOrdinal("active"));
+        //            ListDirectors.fncAdd(new clsDirector(iddirector, number, name, lastName, email, img, active, sexe, salary, idbank));
+        //        }
+        //        // 7. Close Read Connection
+        //        Read.Close();
+        //        Connection.CloseConnection();
+        //        // 8. Make the return
+        //        return ListDirectors;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error in the Model getting the director list from data base " + ex.Message);
+        //        return null;
+        //    }
+        //}
+
+        public void fncGetDirectors(clsDirector director)
         {
             try
             {
@@ -44,34 +90,48 @@ namespace _3.DataAccesLayer
                 // 6. Load the list
                 while (Read.Read())
                 {
+                    director.vId = Read.GetInt32(Read.GetOrdinal("iddirector"));
+                    director.vIdbank= Read.GetInt32(Read.GetOrdinal("idbank"));
+                    director.vNumber= Read.GetString(Read.GetOrdinal("Number"));
+                    director.vName = Read.GetString(Read.GetOrdinal("Name"));
+                    director.vLastName = Read.GetString(Read.GetOrdinal("Last Name"));
+                    director.vEmail= Read.GetString(Read.GetOrdinal("Email"));
+                    director.vImg= Read.GetString(Read.GetOrdinal("img"));
+                    director.vSalary= Read.GetDecimal(Read.GetOrdinal("salary"));
+                    director.vSexe= Read.GetString(Read.GetOrdinal("sexe"));
+                    director.vActive = Read.GetString(Read.GetOrdinal("active"));
+                    ListDirectors.fncAdd(director);
+
+
                     // variables 
-                    string number, name, lastName, email, img, sexe, active;
-                    int iddirector, idbank;
-                    decimal salary;
-                    iddirector = Read.GetInt32(Read.GetOrdinal("iddirector"));
-                    idbank = Read.GetInt32(Read.GetOrdinal("idbank"));
-                    number = Read.GetString(Read.GetOrdinal("Number"));
-                    name = Read.GetString(Read.GetOrdinal("Name"));
-                    lastName = Read.GetString(Read.GetOrdinal("Last Name"));
-                    email = Read.GetString(Read.GetOrdinal("Email"));
-                    img = Read.GetString(Read.GetOrdinal("img"));
-                    salary = Read.GetDecimal(Read.GetOrdinal("salary"));
-                    sexe = Read.GetString(Read.GetOrdinal("sexe"));
-                    active = Read.GetString(Read.GetOrdinal("active"));
-                    ListDirectors.fncAdd(new clsDirector(iddirector, number, name, lastName, email, img, active, sexe, salary, idbank));
+                    //string number, name, lastName, email, img, sexe, active;
+                    //int iddirector, idbank;
+                    //decimal salary;
+                    //iddirector = Read.GetInt32(Read.GetOrdinal("iddirector"));
+                    //idbank = Read.GetInt32(Read.GetOrdinal("idbank"));
+                    //number = Read.GetString(Read.GetOrdinal("Number"));
+                    //name = Read.GetString(Read.GetOrdinal("Name"));
+                    //lastName = Read.GetString(Read.GetOrdinal("Last Name"));
+                    //email = Read.GetString(Read.GetOrdinal("Email"));
+                    //img = Read.GetString(Read.GetOrdinal("img"));
+                    //salary = Read.GetDecimal(Read.GetOrdinal("salary"));
+                    //sexe = Read.GetString(Read.GetOrdinal("sexe"));
+                    //active = Read.GetString(Read.GetOrdinal("active"));
+                    //ListDirectors.fncAdd(new clsDirector(iddirector, number, name, lastName, email, img, active, sexe, salary, idbank));
                 }
                 // 7. Close Read Connection
                 Read.Close();
                 Connection.CloseConnection();
                 // 8. Make the return
-                return ListDirectors;
+               // return ListDirectors;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("Error in the Model getting the director list from data base " + ex.Message);
-                return null;
             }
+
         }
+
 
         // 4 fnc.Load Admins
         public clsListAdmins fncGetAdmins()

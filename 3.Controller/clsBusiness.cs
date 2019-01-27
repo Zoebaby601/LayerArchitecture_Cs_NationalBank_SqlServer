@@ -20,7 +20,7 @@ namespace _2.BusinessLayer
     *  Copyright (c) 2018 Ricardo Mendoza 
     *  Montréal Québec Canada
    */
-    public class clsController
+    public class clsBusiness
     {
         /// <summary>
         /// 1. Obj Model -> object with the interactions with the data base
@@ -38,12 +38,19 @@ namespace _2.BusinessLayer
 
         // DIRECTORS
         // 3. fnc. load directors list
-        public clsListDirectors fncHandleListDirectors()
-        {
-            myBank.vListDirectors = Model.fncGetDirectors();
-            return myBank.vListDirectors;
-        }
+        //public clsListDirectors fncHandleListDirectors()
+        //{
+        //    myBank.vListDirectors = Model.fncGetDirectors();
+        //    return myBank.vListDirectors;
+        //}
         
+        public void fncHandleListDirectors(clsDirector director)
+        {
+            clsDataSource data = new clsDataSource();
+            data.fncGetDirectors(director);
+        }
+
+
         // ADMINS
         // 4. fnc. load admin list
         public clsListAdmins fncHandleListAdmins()

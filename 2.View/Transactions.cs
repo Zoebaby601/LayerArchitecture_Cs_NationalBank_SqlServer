@@ -53,17 +53,32 @@ namespace _1.PresentationLayer
         /// <summary>
         /// Load list Directors
         /// </summary>
+        //public void fncLoadDirectorsList()
+        //{
+        //    clsBusiness Controller = new clsBusiness();
+        //    myBank.vListDirectors = Controller.fncHandleListDirectors();
+        //}
+
         public void fncLoadDirectorsList()
         {
-            clsController Controller = new clsController();
-            myBank.vListDirectors = Controller.fncHandleListDirectors();
+            clsBusiness businnes = new clsBusiness();
+            clsDirector director = new clsDirector();
+            businnes.fncHandleListDirectors(director);
+
+           // clsListDirectors listDirectors = new clsListDirectors();
+
+            Dictionary<string, clsDirector> listDirectors = new Dictionary<string, clsDirector>();
+
+            
+           // myBank.vListDirectors = ;
+
         }
         /// <summary>
         /// Load list Admin
         /// </summary>
         public void fncLoadAdminsList()
         {
-            clsController Controller = new clsController();
+            clsBusiness Controller = new clsBusiness();
             myBank.vListAdmins = Controller.fncHandleListAdmins();
         }
         /// <summary>
@@ -71,7 +86,7 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadAgenciesList()
         {
-            clsController Controller = new clsController();
+            clsBusiness Controller = new clsBusiness();
             myBank.vListAgencies = Controller.fncHandleListAgencies();
             gvAgencies.DataSource = myBank.vListAgencies;
         }
@@ -80,7 +95,7 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadDirectorsAgencyList()
         {
-            clsController Controller = new clsController();
+            clsBusiness Controller = new clsBusiness();
             myAgency.vListDirectorsAgency = Controller.fncHandleListDirectorsAgency();
         }
         /// <summary>
@@ -88,7 +103,7 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadEmployeesList()
         {
-            clsController Controller = new clsController();
+            clsBusiness Controller = new clsBusiness();
             myAgency.vListEmployees = Controller.fncHandleListEmployees();
         }
 
@@ -191,7 +206,7 @@ namespace _1.PresentationLayer
 
         private void LoadtranCmbAgencies()
         {
-            clsController Controller = new clsController();
+            clsBusiness Controller = new clsBusiness();
             cmbtranAgencies.DataSource = Controller.AgenciesList();
             cmbtranAgencies.DisplayMember = "Agency";
             cmbtranAgencies.ValueMember = "idagencies";
@@ -200,7 +215,7 @@ namespace _1.PresentationLayer
 
         //public void getAgencies()
         //{
-        //    clsController Controller = new clsController();
+        //    clsBusiness Controller = new clsBusiness();
         //    Controller.gatAgencies();
         //}
 
@@ -216,7 +231,7 @@ namespace _1.PresentationLayer
 
         private void cmbtranAgencies_SelectedIndexChanged(object sender, EventArgs e)
         {
-            clsController Controller = new clsController();
+            clsBusiness Controller = new clsBusiness();
             string stringcmboxAgencies = cmbtranAgencies.Text.Trim();
             DataTable Table = new DataTable();
             string stringNumber = txtNumerodeClient.Text.Trim();
