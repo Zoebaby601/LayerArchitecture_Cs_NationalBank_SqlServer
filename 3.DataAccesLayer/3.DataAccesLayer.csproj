@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78BDD708-5A83-4EEC-96C8-41EF2237EAFD}</ProjectGuid>
+    <ProjectGuid>{C63DF3F7-32B7-4B0E-8ECC-7E1A8829F3C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_3.Controller</RootNamespace>
-    <AssemblyName>3.Controller</AssemblyName>
+    <RootNamespace>_3.DataAccesLayer</RootNamespace>
+    <AssemblyName>3.DataAccesLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,14 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsBusiness.cs" />
+    <Compile Include="1.Connection\clsConnection.cs" />
+    <Compile Include="1.Connection\clsDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\3.DataAccesLayer\3.DataAccesLayer.csproj">
-      <Project>{c63df3f7-32b7-4b0e-8ecc-7e1a8829f3c7}</Project>
-      <Name>3.DataAccesLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\4.Items\4.Items.csproj">
       <Project>{c6e140ab-d8b2-409a-9266-ad230bba74b4}</Project>
       <Name>4.Items</Name>
