@@ -19,7 +19,7 @@ namespace _1.PresentationLayer
     {
         public static clsBank myBank = new clsBank();
         public static clsAgency myAgency = new clsAgency();
-        
+
         public Transactions()
         {
             InitializeComponent();
@@ -65,12 +65,12 @@ namespace _1.PresentationLayer
             clsDirector director = new clsDirector();
             businnes.fncHandleListDirectors(director);
 
-           // clsListDirectors listDirectors = new clsListDirectors();
+            // clsListDirectors listDirectors = new clsListDirectors();
 
             Dictionary<string, clsDirector> listDirectors = new Dictionary<string, clsDirector>();
 
-            
-           // myBank.vListDirectors = ;
+
+            // myBank.vListDirectors = ;
 
         }
         /// <summary>
@@ -248,6 +248,10 @@ namespace _1.PresentationLayer
             //  gvAgencies.DataSource = clsStaticDataSource.fncGetAgencies();
         }
 
+        private void Transactions_Load_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }
+

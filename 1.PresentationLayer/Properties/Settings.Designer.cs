@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _2.View.Properties
+namespace _1.PresentationLayer.Properties
 {
 
 
