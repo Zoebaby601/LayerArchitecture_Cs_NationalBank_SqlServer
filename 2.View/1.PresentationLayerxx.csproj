@@ -80,8 +80,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\3.Controller\2.BusinessLayer.csproj">
-      <Project>{78bdd708-5a83-4eec-96c8-41ef2237eafd}</Project>
+    <ProjectReference Include="..\2.BusinessLayer\2.BusinessLayer.csproj">
+      <Project>{439d6b7a-9100-4489-a50d-0a012b911dcc}</Project>
       <Name>2.BusinessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\4.Items\4.Items.csproj">
