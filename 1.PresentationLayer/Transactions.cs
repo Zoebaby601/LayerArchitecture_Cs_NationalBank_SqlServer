@@ -25,7 +25,11 @@ namespace _1.PresentationLayer
             InitializeComponent();
         }
 
-
+        /// <summary>
+        /// Load app
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Transactions_Load(object sender, EventArgs e)
         {
             LoadtranCmbAgencies();
@@ -53,25 +57,10 @@ namespace _1.PresentationLayer
         /// <summary>
         /// Load list Directors
         /// </summary>
-        //public void fncLoadDirectorsList()
-        //{
-        //    clsBusiness Controller = new clsBusiness();
-        //    myBank.vListDirectors = Controller.fncHandleListDirectors();
-        //}
-
         public void fncLoadDirectorsList()
         {
-            clsBusiness businnes = new clsBusiness();
-            clsDirector director = new clsDirector();
-            businnes.fncHandleListDirectors(director);
-
-            // clsListDirectors listDirectors = new clsListDirectors();
-
-            Dictionary<string, clsDirector> listDirectors = new Dictionary<string, clsDirector>();
-
-
-            // myBank.vListDirectors = ;
-
+            clsBusiness Controller = new clsBusiness();
+            myBank.vListDirectors = Controller.fncHandleListDirectors( );
         }
         /// <summary>
         /// Load list Admin
@@ -106,7 +95,6 @@ namespace _1.PresentationLayer
             clsBusiness Controller = new clsBusiness();
             myAgency.vListEmployees = Controller.fncHandleListEmployees();
         }
-
         /// <summary>
         /// Load combo directors
         /// </summary>
@@ -170,7 +158,6 @@ namespace _1.PresentationLayer
             {
                 foreach (clsDirectorAgency director in myAgency.vListDirectorsAgency.Elements)
                 {
-
                     cmbListDirectorsAgency.Items.Add(director.vEmail);
                 }
             }
@@ -188,7 +175,6 @@ namespace _1.PresentationLayer
             {
                 foreach (clsEmployee employee in myAgency.vListEmployees.Elements)
                 {
-
                     cmbListEmployee.Items.Add(employee.vHiringDate);
                 }
             }
@@ -197,12 +183,6 @@ namespace _1.PresentationLayer
                 MessageBox.Show(ex.Message);
             }
         }
-
-
-
-
-
-
 
         private void LoadtranCmbAgencies()
         {

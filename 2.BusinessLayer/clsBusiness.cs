@@ -37,19 +37,12 @@ namespace _2.BusinessLayer
         clsAgency myAgency = new clsAgency();
 
         // DIRECTORS
-        // 3. fnc. load directors list
-        //public clsListDirectors fncHandleListDirectors()
-        //{
-        //    myBank.vListDirectors = Model.fncGetDirectors();
-        //    return myBank.vListDirectors;
-        //}
-        
-        public void fncHandleListDirectors(clsDirector director)
+        //3. fnc.load directors list
+        public clsListDirectors fncHandleListDirectors()
         {
-            clsDataSource data = new clsDataSource();
-            data.fncGetDirectors(director);
+            myBank.vListDirectors = Model.fncGetDirectors();
+            return myBank.vListDirectors;
         }
-
 
         // ADMINS
         // 4. fnc. load admin list

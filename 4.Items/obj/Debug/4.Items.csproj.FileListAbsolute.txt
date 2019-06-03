@@ -2,3 +2,4 @@ D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\4.Items\bin\Debug\4.Items.
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\4.Items\bin\Debug\4.Items.pdb
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\4.Items\obj\Debug\4.Items.dll
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\4.Items\obj\Debug\4.Items.pdb
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\4.Items\obj\Debug\4.Items.csprojResolveAssemblyReference.cache
