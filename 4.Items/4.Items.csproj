@@ -56,10 +56,17 @@
     <Compile Include="3.Collections\clsListDirectors.cs" />
     <Compile Include="3.Collections\clsListDirectorsAgency.cs" />
     <Compile Include="3.Collections\clsListEmployees.cs" />
+    <Compile Include="1.Abstract\clsAccount.cs" />
+    <Compile Include="clsComplements.cs" />
+    <Compile Include="clsListPaidAccounts.cs" />
+    <Compile Include="clsListUnpaidAccounts.cs" />
+    <Compile Include="clsPaidAccount.cs" />
+    <Compile Include="clsUnpaidAccount.cs" />
+    <Compile Include="IfncDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="CDM_Hritage.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

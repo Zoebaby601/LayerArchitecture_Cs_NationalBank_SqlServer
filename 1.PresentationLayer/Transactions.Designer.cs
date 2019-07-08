@@ -52,7 +52,7 @@
             this.cmbtranAgencies.Name = "cmbtranAgencies";
             this.cmbtranAgencies.Size = new System.Drawing.Size(121, 21);
             this.cmbtranAgencies.TabIndex = 0;
-            this.cmbtranAgencies.SelectedIndexChanged += new System.EventHandler(this.cmbtranAgencies_SelectedIndexChanged);
+            //this.cmbtranAgencies.SelectedIndexChanged += new System.EventHandler(this.cmbtranAgencies_SelectedIndexChanged);
             // 
             // txtNumerodeClient
             // 

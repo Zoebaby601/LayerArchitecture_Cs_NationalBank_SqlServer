@@ -15,11 +15,24 @@ using _4.Items;
 
 namespace _1.PresentationLayer
 {
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2019 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Hiver 2019
+    */
+
     public partial class Transactions : Form
     {
-        public static clsBank myBank = new clsBank();
-        public static clsAgency myAgency = new clsAgency();
+        static clsBank myBank = new clsBank();
+        static clsAgency myAgency = new clsAgency();
 
+        // CONTROLLER
+        static IabstractFactory factoryGetData = clsDataFactory.factoryData("getData");
+       
         public Transactions()
         {
             InitializeComponent();
@@ -32,9 +45,6 @@ namespace _1.PresentationLayer
         /// <param name="e"></param>
         private void Transactions_Load(object sender, EventArgs e)
         {
-            LoadtranCmbAgencies();
-            DisplayAgencies();
-
             // DIRECTORS
             fncLoadDirectorsList();
             // ADMINS
@@ -59,15 +69,16 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadDirectorsList()
         {
-            clsBusiness Controller = new clsBusiness();
-            myBank.vListDirectors = Controller.fncHandleListDirectors( );
+            IgetCollections Controller = factoryGetData.getCollections("directors");
+            myBank.vListDirectors = Controller.fncHandleListDirectors();
         }
         /// <summary>
         /// Load list Admin
         /// </summary>
         public void fncLoadAdminsList()
         {
-            clsBusiness Controller = new clsBusiness();
+            // clsBusiness Controller = new clsBusiness();
+            IgetCollections Controller = factoryGetData.getCollections("admins");
             myBank.vListAdmins = Controller.fncHandleListAdmins();
         }
         /// <summary>
@@ -75,7 +86,8 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadAgenciesList()
         {
-            clsBusiness Controller = new clsBusiness();
+            // clsBusiness Controller = new clsBusiness();
+            IgetCollections Controller = factoryGetData.getCollections("agencies");
             myBank.vListAgencies = Controller.fncHandleListAgencies();
             gvAgencies.DataSource = myBank.vListAgencies;
         }
@@ -84,7 +96,8 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadDirectorsAgencyList()
         {
-            clsBusiness Controller = new clsBusiness();
+            // clsBusiness Controller = new clsBusiness();
+            IgetCollections Controller = factoryGetData.getCollections("DirectorsAgency");
             myAgency.vListDirectorsAgency = Controller.fncHandleListDirectorsAgency();
         }
         /// <summary>
@@ -92,7 +105,8 @@ namespace _1.PresentationLayer
         /// </summary>
         public void fncLoadEmployeesList()
         {
-            clsBusiness Controller = new clsBusiness();
+            // clsBusiness Controller = new clsBusiness();
+            IgetCollections Controller = factoryGetData.getCollections("employees");
             myAgency.vListEmployees = Controller.fncHandleListEmployees();
         }
         /// <summary>
@@ -184,54 +198,15 @@ namespace _1.PresentationLayer
             }
         }
 
-        private void LoadtranCmbAgencies()
-        {
-            clsBusiness Controller = new clsBusiness();
-            cmbtranAgencies.DataSource = Controller.AgenciesList();
-            cmbtranAgencies.DisplayMember = "Agency";
-            cmbtranAgencies.ValueMember = "idagencies";
-
-        }
-
-        //public void getAgencies()
-        //{
-        //    clsBusiness Controller = new clsBusiness();
-        //    Controller.gatAgencies();
-        //}
-
-
-
-        //private void DisplayClients()
-        //{
-        //    // new Controller cleans the object everytime it is called
-        //    // new Controllercleans the view with every click
-        //    clsInfo Controller = new clsInfo();
-        //    gvClient.DataSource = Controller.LoadClients();
-        //}
-
-        private void cmbtranAgencies_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            clsBusiness Controller = new clsBusiness();
-            string stringcmboxAgencies = cmbtranAgencies.Text.Trim();
-            DataTable Table = new DataTable();
-            string stringNumber = txtNumerodeClient.Text.Trim();
-            Table = Controller.selectqClientByNumber(stringNumber);
-        }
 
         private void btntranClientNumber_Click(object sender, EventArgs e)
         {
 
         }
 
-        public void DisplayAgencies()
-        {
-            //  gvAgencies.DataSource = clsStaticDataSource.fncGetAgencies();
-        }
+       
 
-        private void Transactions_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="_4.Items.clsabstractHuman">
+    <Position X="10.25" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQACQAAAIAAGBAABQAASICACAgAAAAAAAAAAg=</HashCode>
+      <FileName>1.Abstract\clsabstractHuman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsAdmin">
+    <Position X="3.25" Y="15.25" Width="1.5" />
+    <InheritanceLine Type="_4.Items.clsabstractHuman" ManuallyRouted="true">
+      <Path>
+        <Point X="11" Y="21.25" />
+        <Point X="11" Y="20.2" />
+        <Point X="4" Y="20.2" />
+        <Point X="4" Y="17.771" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>2.Objects\clsAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsAgency">
+    <Position X="16.5" Y="3.75" Width="1.5" />
+    <AssociationLine Name="clsListDirectorsAgency" Type="_4.Items.clsListDirectorsAgency" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="9.416" />
+        <Point X="15.896" Y="9.416" Type="JumpStart" />
+        <Point X="15.729" Y="9.416" Type="JumpEnd" />
+        <Point X="13.25" Y="9.416" />
+        <Point X="13.25" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.28" Y="0.725" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="clsListCLients" Type="_4.Items.clsListCLients" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="7.965" />
+        <Point X="15.812" Y="7.965" />
+        <Point X="15.812" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.165" Y="0.625" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="clsListEmployees" Type="_4.Items.clsListEmployees" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="8.914" />
+        <Point X="15.896" Y="8.914" Type="JumpStart" />
+        <Point X="15.729" Y="8.914" Type="JumpEnd" />
+        <Point X="10.688" Y="8.914" />
+        <Point X="10.688" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.183" Y="0.643" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAgAAIAgAFCAERwAAAIBACBCEAAAAAEIAgI=</HashCode>
+      <FileName>2.Objects\clsAgency.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsListDirectorsAgency" />
+      <Property Name="clsListCLients" />
+      <Property Name="clsListEmployees" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_4.Items.clsBank">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <AssociationLine Name="clsListAgencies" Type="_4.Items.clsListAgencies">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.709" Y="0.193" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="clsListAdmins" Type="_4.Items.clsListAdmins" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="6.873" />
+        <Point X="3.938" Y="6.873" />
+        <Point X="3.938" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.253" Y="1.866" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="clsListDirectors" Type="_4.Items.clsListDirectors">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.71" Y="0.268" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAACAAAABAAkJIgAUAAARQAAAEAACgCAAAAAAAAAAI=</HashCode>
+      <FileName>2.Objects\clsBank.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsListAgencies" />
+      <Property Name="clsListAdmins" />
+      <Property Name="clsListDirectors" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_4.Items.clsClient">
+    <Position X="15" Y="15.25" Width="1.5" />
+    <InheritanceLine Type="_4.Items.clsabstractHuman" ManuallyRouted="true">
+      <Path>
+        <Point X="11" Y="21.25" />
+        <Point X="11" Y="20.2" />
+        <Point X="12.917" Y="20.2" Type="JumpStart" />
+        <Point X="13.083" Y="20.2" Type="JumpEnd" />
+        <Point X="15.75" Y="20.2" />
+        <Point X="15.75" Y="19.309" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IABAAAAAAAQAAAAggAAAEAAAAAABIAACAAAAAAAAAEQ=</HashCode>
+      <FileName>2.Objects\clsClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsDate">
+    <Position X="12.25" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAJgAAAAAAAAAAAAAAAAAAAAAEAAAAEwAAAgA=</HashCode>
+      <FileName>2.Objects\clsDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsDirector">
+    <Position X="7.5" Y="15.25" Width="1.5" />
+    <InheritanceLine Type="_4.Items.clsabstractHuman" ManuallyRouted="true">
+      <Path>
+        <Point X="11" Y="21.25" />
+        <Point X="11" Y="20.195" />
+        <Point X="8.25" Y="20.195" />
+        <Point X="8.25" Y="18.155" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAiAAAAwAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>2.Objects\clsDirector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsDirectorAgency">
+    <Position X="12.75" Y="15.25" Width="1.5" />
+    <InheritanceLine Type="_4.Items.clsabstractHuman" ManuallyRouted="true">
+      <Path>
+        <Point X="11" Y="21.25" />
+        <Point X="11" Y="20.181" />
+        <Point X="12.917" Y="20.181" Type="JumpStart" />
+        <Point X="13.083" Y="20.181" Type="JumpEnd" />
+        <Point X="13.5" Y="20.181" />
+        <Point X="13.5" Y="17.771" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAiAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>2.Objects\clsDirectorAgency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsEmployee">
+    <Position X="10.25" Y="15.25" Width="1.5" />
+    <InheritanceLine Type="_4.Items.clsabstractHuman" ManuallyRouted="true">
+      <Path>
+        <Point X="11" Y="21.25" />
+        <Point X="11" Y="20.896" />
+        <Point X="11.035" Y="20.896" />
+        <Point X="11.035" Y="20.178" />
+        <Point X="11" Y="20.178" />
+        <Point X="11" Y="18.54" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="clsDate" Type="_4.Items.clsDate" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="18.25" />
+        <Point X="13" Y="18.25" />
+        <Point X="13" Y="22" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAiAAAAQAAAAAAAAQEAAAAAABAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>2.Objects\clsEmployee.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsDate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_4.Items.clsListAdmins">
+    <Position X="3.25" Y="10.5" Width="1.5" />
+    <AssociationLine Name="clsAdmin" Type="_4.Items.clsAdmin">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.165" Y="0.515" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAJAAAgAYAAAEIAAAAAAAAAAAgQAAAEA=</HashCode>
+      <FileName>3.Collections\clsListAdmins.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsAdmin" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="_4.Items.clsListAgencies">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <AssociationLine Name="clsAgency" Type="_4.Items.clsAgency">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.251" Y="0.224" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABIAAgAYAAAEIAAAAAAAAAAAgQAAAEA=</HashCode>
+      <FileName>3.Collections\clsListAgencies.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsAgency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_4.Items.clsListCLients">
+    <Position X="15" Y="10.5" Width="1.5" />
+    <AssociationLine Name="clsClient" Type="_4.Items.clsClient">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.438" Y="0.497" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAgAYAAgEoAAAAAAAAAAAgQAAAAA=</HashCode>
+      <FileName>3.Collections\clsListCLients.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsClient" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="_4.Items.clsListDirectors">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <AssociationLine Name="clsDirector" Type="_4.Items.clsDirector">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.31" Y="0.552" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAkAYIAAEIAAAAAAAAEAAAQAAAEA=</HashCode>
+      <FileName>3.Collections\clsListDirectors.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsDirector" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="_4.Items.clsListDirectorsAgency">
+    <Position X="12.5" Y="10.5" Width="1.5" />
+    <AssociationLine Name="clsDirectorAgency" Type="_4.Items.clsDirectorAgency">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.219" Y="0.534" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAABAAAgAYAAAEIAAAAAAAAAAEgQAAAEA=</HashCode>
+      <FileName>3.Collections\clsListDirectorsAgency.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsDirectorAgency" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="_4.Items.clsListEmployees">
+    <Position X="10" Y="10.5" Width="1.5" />
+    <AssociationLine Name="clsEmployee" Type="_4.Items.clsEmployee">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.274" Y="0.534" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAABAAAgAYAAAEIAAAAAAAAAAAgQAAAAI=</HashCode>
+      <FileName>3.Collections\clsListEmployees.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsEmployee" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="_4.Items.clsAccount">
+    <Position X="24.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgAAgBAAAAiIAEggAgAAMAMAAAERARBEAlEACAI=</HashCode>
+      <FileName>1.Abstract\clsAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsComplements">
+    <Position X="0.75" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>clsComplements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_4.Items.clsListPaidAccounts">
+    <Position X="18.25" Y="13.75" Width="1.5" />
+    <AssociationLine Name="clsClient" Type="_4.Items.clsClient">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.292" Y="0.151" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAABAAAgAYAAAEoAAAAAAAAAAAgQAAAAA=</HashCode>
+      <FileName>clsListPaidAccounts.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsClient" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4.Items.clsListUnpaidAccounts">
+    <Position X="18.25" Y="18.5" Width="1.5" />
+    <AssociationLine Name="clsClient" Type="_4.Items.clsClient">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.438" Y="0.115" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAABAAAgAYAAAEoAAAAAAAAAAAgQAAAAA=</HashCode>
+      <FileName>clsListUnpaidAccounts.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsClient" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_4.Items.clsPaidAccount">
+    <Position X="21.5" Y="13.75" Width="1.5" />
+    <AssociationLine Name="clsListPaidAccounts" Type="_4.Items.clsListPaidAccounts">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.388" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAhAAAAgAAAAAAAAAMAAAQAAAAABAAFAAAAA=</HashCode>
+      <FileName>clsPaidAccount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsListPaidAccounts" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_4.Items.clsUnpaidAccount">
+    <Position X="21.5" Y="18.5" Width="1.5" />
+    <AssociationLine Name="clsListUnpaidAccounts" Type="_4.Items.clsListUnpaidAccounts">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.128" Y="0.388" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgBAAAAgAAAAAAAAAEAAAAAAAAABACFAAAAA=</HashCode>
+      <FileName>clsUnpaidAccount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="clsListUnpaidAccounts" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="_4.Items.IfncDictionary">
+    <Position X="0.75" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAgAAAAAEAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>IfncDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

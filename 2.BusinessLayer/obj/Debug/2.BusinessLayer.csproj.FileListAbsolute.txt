@@ -1,9 +1,9 @@
-D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\obj\Debug\2.BusinessLayer.csprojResolveAssemblyReference.cache
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\bin\Debug\2.BusinessLayer.dll
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\bin\Debug\2.BusinessLayer.pdb
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\bin\Debug\3.DataAccesLayer.dll
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\bin\Debug\4.Items.dll
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\bin\Debug\3.DataAccesLayer.pdb
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\bin\Debug\4.Items.pdb
+D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\obj\Debug\2.BusinessLayer.csprojResolveAssemblyReference.cache
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\obj\Debug\2.BusinessLayer.dll
 D:\10.Portafolio\prjWin_MVC_NationalBank_SqlServer_Rm\2.BusinessLayer\obj\Debug\2.BusinessLayer.pdb

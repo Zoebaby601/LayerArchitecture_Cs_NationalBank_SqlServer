@@ -94,6 +94,18 @@ namespace _4.Items
             set { ListAgencies = value; }
         }
 
+        public clsListAgencies clsListAgencies
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public clsListAdmins clsListAdmins
         {
             get
@@ -118,17 +130,7 @@ namespace _4.Items
             }
         }
 
-        public clsListAgencies clsListAgencies
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
 
-            set
-            {
-            }
-        }
 
         /// <summary>
         /// Methodes

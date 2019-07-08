@@ -13,7 +13,7 @@ namespace _4.Items
     *  Copyright (c) 2018 Ricardo Mendoza
     *  Montréal Québec Canada
     */
-    public class clsListEmployees
+    public class clsListEmployees : IfncDictionary
     {
         /// <summary>
         /// Propierties -> Collection : ListEmployees.
@@ -123,6 +123,11 @@ namespace _4.Items
                 info += employee.fncDisplayHuman();
             }
             return info;
+        }
+
+        public void fncClear()
+        {
+            throw new NotImplementedException();
         }
     }
 }

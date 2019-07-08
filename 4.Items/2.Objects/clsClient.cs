@@ -94,12 +94,5 @@ namespace _4.Items
             info = info + "\nIdemployee " + Idemployee;
             return info;
         }
-        /// <summary>
-        /// this function return do not exist to an empty propertie.
-        /// </summary>
-        //public string fncEmptyConstructor()
-        //{
-        //    return "Don not exist";
-        //}
     }
 }

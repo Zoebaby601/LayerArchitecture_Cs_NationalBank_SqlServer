@@ -134,6 +134,18 @@ namespace _4.Items
             set { ListClients = value; }
         }
 
+        public clsListDirectorsAgency clsListDirectorsAgency
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public clsListCLients clsListCLients
         {
             get
@@ -147,18 +159,6 @@ namespace _4.Items
         }
 
         public clsListEmployees clsListEmployees
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public clsListDirectorsAgency clsListDirectorsAgency
         {
             get
             {

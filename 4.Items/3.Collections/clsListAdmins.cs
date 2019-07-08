@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _4.Items
 {
-    public class clsListAdmins
+    public class clsListAdmins : IfncDictionary
     {
         private Dictionary<string, clsAdmin> ListAdmins;
 
@@ -23,18 +23,6 @@ namespace _4.Items
         public Dictionary<string, clsAdmin>.ValueCollection Elements
         {
             get { return ListAdmins.Values; }
-        }
-
-        public clsAdmin clsAdmin
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
         }
 
         public bool fncExist(string number)
@@ -90,6 +78,23 @@ namespace _4.Items
                 info = info + admin.fncDisplayHuman();
             }
             return info;
+        }
+
+        public void fncClear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public clsAdmin clsAdmin
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
         }
     }
 }

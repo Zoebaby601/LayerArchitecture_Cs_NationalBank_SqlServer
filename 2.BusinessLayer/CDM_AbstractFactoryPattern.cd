@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="_2.BusinessLayer.clsBusiness">
+    <Position X="0.5" Y="1" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAQACAAAAAQAAgAAAAAAAA=</HashCode>
+      <FileName>clsBusiness.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_2.BusinessLayer.clsGetCollectionsFactory">
+    <Position X="9.75" Y="3.25" Width="3.25" />
+    <AssociationLine Name="IgetCollections" Type="_2.BusinessLayer.IgetCollections">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.165" Y="0.365" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>clsGetCollectionsFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IgetCollections" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_2.BusinessLayer.clsDataFactory">
+    <Position X="19" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>clsDataFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IabstractFactory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_2.BusinessLayer.clsGetDirectors">
+    <Position X="0.5" Y="8.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAAACAAAAAQAAgAAAAAAAA=</HashCode>
+      <FileName>clsGetDirectors.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_2.BusinessLayer.clsGetNobody">
+    <Position X="0.5" Y="12" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>clsGetNobody.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_2.BusinessLayer.clsGetAdmins">
+    <Position X="5" Y="8.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAAACAAAAAQAAgAAAAAAAA=</HashCode>
+      <FileName>clsGetAdmins.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_2.BusinessLayer.clsGetAgencies">
+    <Position X="9.75" Y="8.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAAACAAAAAQAAgAAAAAAAA=</HashCode>
+      <FileName>clsGetAgencies.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_2.BusinessLayer.clsGetDirectorsAgency">
+    <Position X="14.75" Y="8.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAQACAAAAAQAAgAAAAAAAA=</HashCode>
+      <FileName>clsGetDirectorsAgency.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_2.BusinessLayer.clGetEmployees">
+    <Position X="20" Y="8.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAQACAAAAAQAAgAAAAAAAA=</HashCode>
+      <FileName>clGetEmployees.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="_2.BusinessLayer.IabstractFactory">
+    <Position X="14.25" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IabstractFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_2.BusinessLayer.IgetCollections">
+    <Position X="9.5" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAACABAAEAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>IgetCollections.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

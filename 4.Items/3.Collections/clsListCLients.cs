@@ -13,7 +13,7 @@ namespace _4.Items
     *  Copyright (c) 2018 Ricardo Mendoza
     *  Montréal Québec Canada
     */
-    public class clsListCLients
+    public class clsListCLients : IfncDictionary
     {
         /// <summary>
         /// Propierties -> Collection : ListClients.
@@ -126,6 +126,11 @@ namespace _4.Items
                 info += client.fncDisplayHuman();
             }
             return info;
+        }
+
+        public void fncClear()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _4.Items
 {
-    public class clsListDirectorsAgency
+    public class clsListDirectorsAgency : IfncDictionary
     {
         /*
         * This project uses the following licenses:
@@ -136,6 +136,11 @@ namespace _4.Items
                 info += director.fncDisplayHuman();
             }
             return info;
+        }
+
+        public void fncClear()
+        {
+            throw new NotImplementedException();
         }
     }
 }

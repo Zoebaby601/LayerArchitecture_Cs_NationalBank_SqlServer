@@ -41,7 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clGetEmployees.cs" />
     <Compile Include="clsBusiness.cs" />
+    <Compile Include="clsDataFactory.cs" />
+    <Compile Include="clsGetDirectorsAgency.cs" />
+    <Compile Include="clsGetAdmins.cs" />
+    <Compile Include="clsGetAgencies.cs" />
+    <Compile Include="clsGetCollectionsFactory.cs" />
+    <Compile Include="clsGetDirectors.cs" />
+    <Compile Include="clsGetNobody.cs" />
+    <Compile Include="IabstractFactory.cs" />
+    <Compile Include="IgetCollections.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +63,9 @@
       <Project>{c6e140ab-d8b2-409a-9266-ad230bba74b4}</Project>
       <Name>4.Items</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CDM_AbstractFactoryPattern.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
