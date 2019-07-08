@@ -101,37 +101,16 @@ namespace _3.DataAccesLayer
                     director.vSexe= Read.GetString(Read.GetOrdinal("sexe"));
                     director.vActive = Read.GetString(Read.GetOrdinal("active"));
                     ListDirectors.fncAdd(director);
-
-
-                    // variables 
-                    //string number, name, lastName, email, img, sexe, active;
-                    //int iddirector, idbank;
-                    //decimal salary;
-                    //iddirector = Read.GetInt32(Read.GetOrdinal("iddirector"));
-                    //idbank = Read.GetInt32(Read.GetOrdinal("idbank"));
-                    //number = Read.GetString(Read.GetOrdinal("Number"));
-                    //name = Read.GetString(Read.GetOrdinal("Name"));
-                    //lastName = Read.GetString(Read.GetOrdinal("Last Name"));
-                    //email = Read.GetString(Read.GetOrdinal("Email"));
-                    //img = Read.GetString(Read.GetOrdinal("img"));
-                    //salary = Read.GetDecimal(Read.GetOrdinal("salary"));
-                    //sexe = Read.GetString(Read.GetOrdinal("sexe"));
-                    //active = Read.GetString(Read.GetOrdinal("active"));
-                    //ListDirectors.fncAdd(new clsDirector(iddirector, number, name, lastName, email, img, active, sexe, salary, idbank));
                 }
                 // 7. Close Read Connection
                 Read.Close();
                 Connection.CloseConnection();
-                // 8. Make the return
-               // return ListDirectors;
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error in the Model getting the director list from data base " + ex.Message);
             }
-
         }
-
 
         // 4 fnc.Load Admins
         public clsListAdmins fncGetAdmins()
@@ -326,10 +305,6 @@ namespace _3.DataAccesLayer
             }
         }
 
-
-
-
-
         // 4. fnc.Load agencies
         public DataTable AgenciesList()
         {
@@ -387,10 +362,6 @@ namespace _3.DataAccesLayer
                 return null;
             }
         }// end clients list
-
-
-
-
 
         // 6. fnc.LoadClient by agency
         public DataTable selectqClientByAgency(string Agency)
@@ -453,46 +424,5 @@ namespace _3.DataAccesLayer
                 return null;
             }
         } // end client by number
-
-
-
-
-
-
-
-
-
-        //public string ReaderClient(string Number)
-        //{
-        //    try
-        //    {
-        //        // 1. Execute Open connection
-        //        Command.Connection = Connection.OpenConnection();
-        //        // 2. Execute store procedure
-        //        Command.CommandText = "selectqClientByAgency";
-        //        // 3. Execute command type
-        //        Command.CommandType = CommandType.StoredProcedure;
-        //        // 4. Execute parameter
-        //        Command.Parameters.AddWithValue("@aNumber", Number);
-        //        // 5. Read Rows
-        //        SqlDataReader Read;
-        //        // 6. Execute read the Rows from stored procedure
-        //        Read = Command.ExecuteReader(); // to read rows - return rows
-        //        // 7. Execute Load Reader
-        //        string reader;
-        //        if(Read.Read()==true)
-        //        {
-        //            reader=Read.GetString(Read.GetOrdinal())
-        //        }
-        //        // 8. Execute reuse the object SqlCpmmad command
-        //        // 9. Close connection
-        //        // 10. Make return
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        MessageBox.Show("Error in the Model executing the function ReaderClient : " + " " + ex.Message);
-        //        return null;
-        //    }
-        //}
     }
 }
