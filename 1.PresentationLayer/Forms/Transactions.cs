@@ -30,12 +30,19 @@ namespace _1.PresentationLayer
         static clsBank myBank = new clsBank();
         static clsAgency myAgency = new clsAgency();
 
+        private clsClientController Client;
+
         // CONTROLLER
         static IabstractFactory factoryGetData = clsDataFactory.factoryData("getData");
        
         public Transactions()
         {
             InitializeComponent();
+            Client = new clsClientController();
+        }
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            gvClients.DataSource = Client.GetClientsAll(txtFiltrar.Text);
         }
 
         /// <summary>
@@ -45,6 +52,11 @@ namespace _1.PresentationLayer
         /// <param name="e"></param>
         private void Transactions_Load(object sender, EventArgs e)
         {
+
+            gvClients.DataSource = Client.GetClientsAll("");
+
+
+
             // DIRECTORS
             fncLoadDirectorsList();
             // ADMINS
@@ -89,7 +101,7 @@ namespace _1.PresentationLayer
             // clsBusiness Controller = new clsBusiness();
             IgetCollections Controller = factoryGetData.getCollections("agencies");
             myBank.vListAgencies = Controller.fncHandleListAgencies();
-            gvAgencies.DataSource = myBank.vListAgencies;
+            gvClients.DataSource = myBank.vListAgencies;
         }
         /// <summary>
         /// Load list Directors
@@ -203,8 +215,6 @@ namespace _1.PresentationLayer
         {
 
         }
-
-       
 
         
     }

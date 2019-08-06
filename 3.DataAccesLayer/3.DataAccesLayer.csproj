@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="1.Connection\clsConnection.cs" />
     <Compile Include="1.Connection\clsDataSource.cs" />
+    <Compile Include="Repository\clsClientRepository.cs" />
+    <Compile Include="Repository\clsConnectionSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +53,7 @@
       <Name>4.Items</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

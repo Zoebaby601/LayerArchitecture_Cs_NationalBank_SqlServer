@@ -81,6 +81,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="_2.BusinessLayer.clsClientService">
+    <Position X="28" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAAA=</HashCode>
+      <FileName>clsClientService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="_2.BusinessLayer.IabstractFactory">
     <Position X="14.25" Y="1" Width="3.25" />
     <TypeIdentifier>

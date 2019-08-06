@@ -8,6 +8,9 @@ using System.Windows.Forms; // MsgBox
 using System.Data;
 using System.Data.SqlClient;
 using _4.Items;
+// IEnumerable
+using System.Collections;
+using System.Collections.Generic;
 
 namespace _3.DataAccesLayer
 {
@@ -17,7 +20,7 @@ namespace _3.DataAccesLayer
      *  Copyright (c) 2018 Ricardo Mendoza 
      *  Montréal Québec Canada
     */
-    public class clsDataSource
+    public class clsDataSource : IClientRepository
     {
         // 1. Obj clsConnection
         private clsConnection Connection = new clsConnection();
@@ -26,6 +29,55 @@ namespace _3.DataAccesLayer
         // 3. Read Rows
         private SqlDataReader Read;
 
+        public IEnumerable<clsClient> getClients(string filter)
+        {
+            try
+            {
+                // 1. Objet clsListDirectors
+                // clsListCLients ListClients = new clsListCLients();
+                List<clsClient> ListClients = new List<clsClient>();
+                // 2. Execute open connection
+                Command.Connection = Connection.OpenConnection();
+                // 3. Execute stored procedure
+                Command.CommandText = "selectClients";
+                // 4. Execute specify the command type
+                Command.CommandType = CommandType.StoredProcedure;
+                // 5. Execute the Reader
+                Read = Command.ExecuteReader();
+                // 6. Load the list
+                while (Read.Read())
+                {
+                    // variables 
+                    string number, name, lastName, email, img, address, cardNumber, nip, sexe, active;
+                    int idclient, idagencies, idemployee;
+                    
+                    idclient = Read.GetInt32(Read.GetOrdinal("idclient"));
+                    number = Read.GetString(Read.GetOrdinal("Number"));
+                    name = Read.GetString(Read.GetOrdinal("Name"));
+                    lastName = Read.GetString(Read.GetOrdinal("Last Name"));
+                    email = Read.GetString(Read.GetOrdinal("Email"));
+                    img = Read.GetString(Read.GetOrdinal("Img"));
+                    active = Read.GetString(Read.GetOrdinal("Active"));
+                    sexe = Read.GetString(Read.GetOrdinal("Sexe"));
+                    address = Read.GetString(Read.GetOrdinal("Address"));
+                    cardNumber = Read.GetString(Read.GetOrdinal("Card Number"));
+                    nip = Read.GetString(Read.GetOrdinal("Nip"));
+                    idagencies = Read.GetInt32(Read.GetOrdinal("idagencies"));
+                    idemployee = Read.GetInt32(Read.GetOrdinal("idemployee"));
+                    ListClients.Add(new clsClient(idclient, number, name, lastName, email, img, active, sexe, address, cardNumber, nip, idagencies, idemployee));
+                }
+                // 7. Close Read Connection
+                Read.Close();
+                Connection.CloseConnection();
+                // 8. Make the return
+                return ListClients;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error in the Model getting the client list from data base " + e.Message);
+                return null;
+            }
+        }
         // 4 fnc.Load Directors
         public clsListDirectors fncGetDirectors()
         {

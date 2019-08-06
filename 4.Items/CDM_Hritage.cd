@@ -27,7 +27,7 @@
     <AssociationLine Name="clsListDirectorsAgency" Type="_4.Items.clsListDirectorsAgency" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="16.5" Y="9.416" />
-        <Point X="15.896" Y="9.416" Type="JumpStart" />
+        <Point X="15.895" Y="9.416" Type="JumpStart" />
         <Point X="15.729" Y="9.416" Type="JumpEnd" />
         <Point X="13.25" Y="9.416" />
         <Point X="13.25" Y="10.5" />
@@ -49,7 +49,7 @@
     <AssociationLine Name="clsListEmployees" Type="_4.Items.clsListEmployees" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="16.5" Y="8.914" />
-        <Point X="15.896" Y="8.914" Type="JumpStart" />
+        <Point X="15.895" Y="8.914" Type="JumpStart" />
         <Point X="15.729" Y="8.914" Type="JumpEnd" />
         <Point X="10.688" Y="8.914" />
         <Point X="10.688" Y="10.5" />
@@ -301,7 +301,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>QAAAAAAAAAAAABAAAgAYAAAEoAAAAAAAAAAAgQAAAAA=</HashCode>
-      <FileName>clsListPaidAccounts.cs</FileName>
+      <FileName>3.Collections\clsListPaidAccounts.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsClient" />
@@ -317,7 +317,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAABAAAgAYAAAEoAAAAAAAAAAAgQAAAAA=</HashCode>
-      <FileName>clsListUnpaidAccounts.cs</FileName>
+      <FileName>3.Collections\clsListUnpaidAccounts.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsClient" />
@@ -333,7 +333,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAhAAAAgAAAAAAAAAMAAAQAAAAABAAFAAAAA=</HashCode>
-      <FileName>clsPaidAccount.cs</FileName>
+      <FileName>2.Objects\clsPaidAccount.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsListPaidAccounts" />
@@ -348,17 +348,24 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAgBAAAAgAAAAAAAAAEAAAAAAAAABACFAAAAA=</HashCode>
-      <FileName>clsUnpaidAccount.cs</FileName>
+      <FileName>2.Objects\clsUnpaidAccount.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsListUnpaidAccounts" />
     </ShowAsAssociation>
   </Class>
   <Interface Name="_4.Items.IfncDictionary">
-    <Position X="0.75" Y="3.75" Width="2.25" />
+    <Position X="18.75" Y="3.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAAAgAAAAAEAAAAAAAAAAAAAQAAAAA=</HashCode>
-      <FileName>IfncDictionary.cs</FileName>
+      <FileName>1.Abstract\IfncDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_4.Items.IClientRepository">
+    <Position X="21.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>1.Abstract\IClientRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

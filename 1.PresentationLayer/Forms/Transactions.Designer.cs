@@ -31,7 +31,7 @@
             this.cmbtranAgencies = new System.Windows.Forms.ComboBox();
             this.txtNumerodeClient = new System.Windows.Forms.TextBox();
             this.btntranClientNumber = new System.Windows.Forms.Button();
-            this.gvAgencies = new System.Windows.Forms.DataGridView();
+            this.gvClients = new System.Windows.Forms.DataGridView();
             this.cmbListAgencies = new System.Windows.Forms.ComboBox();
             this.cmbListAdmins = new System.Windows.Forms.ComboBox();
             this.cmbListDirectors = new System.Windows.Forms.ComboBox();
@@ -42,21 +42,21 @@
             this.lblListAdmins = new System.Windows.Forms.Label();
             this.lblListAgencies = new System.Windows.Forms.Label();
             this.lblListDirectors = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gvAgencies)).BeginInit();
+            this.txtFiltrar = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gvClients)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbtranAgencies
             // 
             this.cmbtranAgencies.FormattingEnabled = true;
-            this.cmbtranAgencies.Location = new System.Drawing.Point(616, 132);
+            this.cmbtranAgencies.Location = new System.Drawing.Point(796, 250);
             this.cmbtranAgencies.Name = "cmbtranAgencies";
             this.cmbtranAgencies.Size = new System.Drawing.Size(121, 21);
             this.cmbtranAgencies.TabIndex = 0;
-            //this.cmbtranAgencies.SelectedIndexChanged += new System.EventHandler(this.cmbtranAgencies_SelectedIndexChanged);
             // 
             // txtNumerodeClient
             // 
-            this.txtNumerodeClient.Location = new System.Drawing.Point(616, 178);
+            this.txtNumerodeClient.Location = new System.Drawing.Point(796, 296);
             this.txtNumerodeClient.Name = "txtNumerodeClient";
             this.txtNumerodeClient.Size = new System.Drawing.Size(121, 20);
             this.txtNumerodeClient.TabIndex = 1;
@@ -71,13 +71,13 @@
             this.btntranClientNumber.UseVisualStyleBackColor = true;
             this.btntranClientNumber.Click += new System.EventHandler(this.btntranClientNumber_Click);
             // 
-            // gvAgencies
+            // gvClients
             // 
-            this.gvAgencies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvAgencies.Location = new System.Drawing.Point(30, 12);
-            this.gvAgencies.Name = "gvAgencies";
-            this.gvAgencies.Size = new System.Drawing.Size(564, 150);
-            this.gvAgencies.TabIndex = 3;
+            this.gvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvClients.Location = new System.Drawing.Point(30, 12);
+            this.gvClients.Name = "gvClients";
+            this.gvClients.Size = new System.Drawing.Size(1360, 150);
+            this.gvClients.TabIndex = 3;
             // 
             // cmbListAgencies
             // 
@@ -164,11 +164,20 @@
             this.lblListDirectors.TabIndex = 13;
             this.lblListDirectors.Text = "cmbListDirectors";
             // 
+            // txtFiltrar
+            // 
+            this.txtFiltrar.Location = new System.Drawing.Point(409, 291);
+            this.txtFiltrar.Name = "txtFiltrar";
+            this.txtFiltrar.Size = new System.Drawing.Size(272, 20);
+            this.txtFiltrar.TabIndex = 14;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
+            // 
             // Transactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 335);
+            this.ClientSize = new System.Drawing.Size(1421, 335);
+            this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.lblListDirectors);
             this.Controls.Add(this.lblListAgencies);
             this.Controls.Add(this.lblListAdmins);
@@ -179,14 +188,14 @@
             this.Controls.Add(this.cmbListDirectors);
             this.Controls.Add(this.cmbListAdmins);
             this.Controls.Add(this.cmbListAgencies);
-            this.Controls.Add(this.gvAgencies);
+            this.Controls.Add(this.gvClients);
             this.Controls.Add(this.btntranClientNumber);
             this.Controls.Add(this.txtNumerodeClient);
             this.Controls.Add(this.cmbtranAgencies);
             this.Name = "Transactions";
             this.Text = "MVC_NationalBanc C# .NET";
             this.Load += new System.EventHandler(this.Transactions_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvAgencies)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvClients)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +206,7 @@
         private System.Windows.Forms.ComboBox cmbtranAgencies;
         private System.Windows.Forms.TextBox txtNumerodeClient;
         private System.Windows.Forms.Button btntranClientNumber;
-        private System.Windows.Forms.DataGridView gvAgencies;
+        private System.Windows.Forms.DataGridView gvClients;
         private System.Windows.Forms.ComboBox cmbListAgencies;
         private System.Windows.Forms.ComboBox cmbListAdmins;
         private System.Windows.Forms.ComboBox cmbListDirectors;
@@ -208,6 +217,7 @@
         private System.Windows.Forms.Label lblListAdmins;
         private System.Windows.Forms.Label lblListAgencies;
         private System.Windows.Forms.Label lblListDirectors;
+        private System.Windows.Forms.TextBox txtFiltrar;
     }
 }
 

@@ -675,3 +675,78 @@ GO
 
 -- Exec selectAccountsByClient
 -- @alastName = 'Winfreh'
+
+-- =============================================
+-- Author:		Ricardo Mendoza
+-- Create date: 3-12-2018
+-- Description:	Select clients by Number from bd_NationalBank
+-- 19.- selectqClientByClientNumber
+-- =============================================
+
+USE [bd_NationalBank]
+GO
+/****** Object:  StoredProcedure [dbo].[selectClientByNumber]    Script Date: 8/5/2019 8:13:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[selectClientByNumber]
+@aNumber VARCHAR(45) = null
+AS
+BEGIN
+SELECT 
+b.idclient AS idclient,
+b.clientNumber AS clientNumber,
+b.name As name,
+b.lastName As lastName,
+b.email as email,
+b.img as img,
+b.active as active,
+b.sexe as sexe,
+b.address as address,
+b.cardNumber as cardNumber,
+b.nip as nip,
+b.idagencies as idagencies,
+b.idemployee as idemployee
+--FROM tclient b WHERE @aNumber = clientNumber ORDER BY name
+FROM tclient b WHERE clientNumber like @aNumber + '%'  ORDER BY name
+END
+
+-- exec selectClientByNumber   'C'
+
+-- =============================================
+-- Author:		Ricardo Mendoza
+-- Create date: 3-12-2018
+-- Description:	Select clients by Number from bd_NationalBank
+-- 20.- selectClientByCondition
+-- =============================================
+
+USE [bd_NationalBank]
+GO
+/****** Object:  StoredProcedure [dbo].[selectClientByNumber]    Script Date: 8/5/2019 8:13:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+Create PROCEDURE [dbo].[selectClientByCondition]
+@aCondition VARCHAR(45) = null
+AS
+BEGIN
+SELECT 
+b.idclient AS idclient,
+b.clientNumber AS clientNumber,
+b.name As name,
+b.lastName As lastName,
+b.email as email,
+b.img as img,
+b.active as active,
+b.sexe as sexe,
+b.address as address,
+b.cardNumber as cardNumber,
+b.nip as nip,
+b.idagencies as idagencies,
+b.idemployee as idemployee
+--FROM tclient b WHERE @aNumber = clientNumber ORDER BY name
+FROM tclient b WHERE clientNumber like @aCondition + '%' or name like @aCondition + '%' or lastName like @aCondition + '%' ORDER BY name
+END
+GO

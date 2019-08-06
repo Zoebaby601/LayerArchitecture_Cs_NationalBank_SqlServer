@@ -20,8 +20,10 @@ namespace _3.DataAccesLayer
     {
         // Error 40: Could not open a connection to SQL Server fixed with  http://msdn.microsoft.com/en-us/library/ms174212.aspx
         // in My computer : C:\Windows\SysWOW64\SQLServerManager14.msc
-        static private string stringConnection = "Data Source = .; DataBase = bd_NationalBank; Integrated Security = true";
-        private SqlConnection MyConnection = new SqlConnection(stringConnection);
+        //static private string stringConnection = "Data Source = .; DataBase = bd_NationalBank; Integrated Security = true";
+        static string stringConnection = "Data Source = .; DataBase = bd_NationalBank; Integrated Security = true";
+        //private SqlConnection MyConnection = new SqlConnection(stringConnection);
+        protected SqlConnection MyConnection = new SqlConnection(stringConnection);
 
         // OPEN CONNECTION
         public SqlConnection OpenConnection()

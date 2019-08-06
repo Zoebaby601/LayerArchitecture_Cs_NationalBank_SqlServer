@@ -41,28 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1.Abstract\clsabstractHuman.cs" />
-    <Compile Include="2.Objects\clsAdmin.cs" />
-    <Compile Include="2.Objects\clsAgency.cs" />
-    <Compile Include="2.Objects\clsBank.cs" />
-    <Compile Include="2.Objects\clsClient.cs" />
-    <Compile Include="2.Objects\clsDate.cs" />
-    <Compile Include="2.Objects\clsDirector.cs" />
-    <Compile Include="2.Objects\clsDirectorAgency.cs" />
-    <Compile Include="2.Objects\clsEmployee.cs" />
+    <Compile Include="1.Abstractions\clsabstractHuman.cs" />
+    <Compile Include="2.Entities\clsAdmin.cs" />
+    <Compile Include="2.Entities\clsAgency.cs" />
+    <Compile Include="2.Entities\clsBank.cs" />
+    <Compile Include="2.Entities\clsClient.cs" />
+    <Compile Include="2.Entities\clsDate.cs" />
+    <Compile Include="2.Entities\clsDirector.cs" />
+    <Compile Include="2.Entities\clsDirectorAgency.cs" />
+    <Compile Include="2.Entities\clsEmployee.cs" />
     <Compile Include="3.Collections\clsListAdmins.cs" />
     <Compile Include="3.Collections\clsListAgencies.cs" />
     <Compile Include="3.Collections\clsListCLients.cs" />
     <Compile Include="3.Collections\clsListDirectors.cs" />
     <Compile Include="3.Collections\clsListDirectorsAgency.cs" />
     <Compile Include="3.Collections\clsListEmployees.cs" />
-    <Compile Include="1.Abstract\clsAccount.cs" />
+    <Compile Include="1.Abstractions\clsAccount.cs" />
     <Compile Include="clsComplements.cs" />
-    <Compile Include="clsListPaidAccounts.cs" />
-    <Compile Include="clsListUnpaidAccounts.cs" />
-    <Compile Include="clsPaidAccount.cs" />
-    <Compile Include="clsUnpaidAccount.cs" />
-    <Compile Include="IfncDictionary.cs" />
+    <Compile Include="3.Collections\clsListPaidAccounts.cs" />
+    <Compile Include="3.Collections\clsListUnpaidAccounts.cs" />
+    <Compile Include="2.Entities\clsPaidAccount.cs" />
+    <Compile Include="2.Entities\clsUnpaidAccount.cs" />
+    <Compile Include="1.Abstractions\IClientRepository.cs" />
+    <Compile Include="1.Abstractions\IfncDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
