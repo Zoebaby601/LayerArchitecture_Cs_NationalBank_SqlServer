@@ -45,9 +45,9 @@ namespace _2.BusinessLayer
 
         // ADMINS
         // 2. fnc. load admin list
-        public clsListAdmins fncHandleListAdmins()
+        public clsListAdmins fncHandleListAdmins(string filter)
         {
-            myBank.vListAdmins = Model.fncGetAdmins();
+            myBank.vListAdmins = Model.fncGetAdmins(filter);
             return myBank.vListAdmins;
         }
 

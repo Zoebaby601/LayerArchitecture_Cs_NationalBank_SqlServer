@@ -43,7 +43,7 @@ namespace _2.BusinessLayer
             return myBank.vListDirectors;
         }
 
-        public clsListAdmins fncHandleListAdmins()
+        public clsListAdmins fncHandleListAdmins(string admins)
         {
             throw new NotImplementedException();
         }

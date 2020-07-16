@@ -45,6 +45,7 @@ With C# and Visual Studio the class diagram is implemented.
  * [C5/ Arquitectura en Capas/ Análisis completo (conceptos,principios,modelos,...)/Ejemplo C#- DIP-DDD](https://www.youtube.com/watch?v=SGXR0pDCP38&t=2464s)
  * [Dashboard / Sumario - NCapas SQL C# (POO)](https://www.youtube.com/watch?v=PmgSBN7xnzM&list=PLqjdFmR_HdQQaB7W6NWj9Mtdl3QvQn2oA)
  * [SQL Server connection](https://www.youtube.com/watch?v=OdDkFPO_nto)
+ * [Curso de Git y Github : 1 - 15](https://www.youtube.com/watch?v=j8CSUPIB8mA)
  
  
 ## Installation

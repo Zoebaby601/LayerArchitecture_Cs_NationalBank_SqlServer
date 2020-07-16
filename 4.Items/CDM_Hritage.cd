@@ -4,7 +4,7 @@
     <Position X="10.25" Y="21.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAQACQAAAIAAGBAABQAASICACAgAAAAAAAAAAg=</HashCode>
-      <FileName>1.Abstract\clsabstractHuman.cs</FileName>
+      <FileName>1.Abstractions\clsabstractHuman.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsAdmin">
@@ -19,7 +19,7 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
-      <FileName>2.Objects\clsAdmin.cs</FileName>
+      <FileName>2.Entities\clsAdmin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsAgency">
@@ -60,7 +60,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAgAAIAgAFCAERwAAAIBACBCEAAAAAEIAgI=</HashCode>
-      <FileName>2.Objects\clsAgency.cs</FileName>
+      <FileName>2.Entities\clsAgency.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsListDirectorsAgency" />
@@ -92,7 +92,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AIAACAAAABAAkJIgAUAAARQAAAEAACgCAAAAAAAAAAI=</HashCode>
-      <FileName>2.Objects\clsBank.cs</FileName>
+      <FileName>2.Entities\clsBank.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsListAgencies" />
@@ -114,14 +114,14 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>IABAAAAAAAQAAAAggAAAEAAAAAABIAACAAAAAAAAAEQ=</HashCode>
-      <FileName>2.Objects\clsClient.cs</FileName>
+      <FileName>2.Entities\clsClient.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsDate">
     <Position X="12.25" Y="22" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAJgAAAAAAAAAAAAAAAAAAAAAEAAAAEwAAAgA=</HashCode>
-      <FileName>2.Objects\clsDate.cs</FileName>
+      <FileName>2.Entities\clsDate.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsDirector">
@@ -136,7 +136,7 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAiAAAAwAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>2.Objects\clsDirector.cs</FileName>
+      <FileName>2.Entities\clsDirector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsDirectorAgency">
@@ -153,7 +153,7 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAiAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>2.Objects\clsDirectorAgency.cs</FileName>
+      <FileName>2.Entities\clsDirectorAgency.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsEmployee">
@@ -177,7 +177,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AIAAAiAAAAQAAAAAAAAQEAAAAAABAAAAAAAAAAAIAAA=</HashCode>
-      <FileName>2.Objects\clsEmployee.cs</FileName>
+      <FileName>2.Entities\clsEmployee.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsDate" />
@@ -282,7 +282,7 @@
     <Position X="24.25" Y="13.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAgAAgBAAAAiIAEggAgAAMAMAAAERARBEAlEACAI=</HashCode>
-      <FileName>1.Abstract\clsAccount.cs</FileName>
+      <FileName>1.Abstractions\clsAccount.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_4.Items.clsComplements">
@@ -333,7 +333,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAhAAAAgAAAAAAAAAMAAAQAAAAABAAFAAAAA=</HashCode>
-      <FileName>2.Objects\clsPaidAccount.cs</FileName>
+      <FileName>2.Entities\clsPaidAccount.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsListPaidAccounts" />
@@ -348,7 +348,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAgBAAAAgAAAAAAAAAEAAAAAAAAABACFAAAAA=</HashCode>
-      <FileName>2.Objects\clsUnpaidAccount.cs</FileName>
+      <FileName>2.Entities\clsUnpaidAccount.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="clsListUnpaidAccounts" />
@@ -358,14 +358,21 @@
     <Position X="18.75" Y="3.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAAAgAAAAAEAAAAAAAAAAAAAQAAAAA=</HashCode>
-      <FileName>1.Abstract\IfncDictionary.cs</FileName>
+      <FileName>1.Abstractions\IfncDictionary.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="_4.Items.IClientRepository">
-    <Position X="21.75" Y="3.75" Width="1.5" />
+    <Position X="21.75" Y="3.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
-      <FileName>1.Abstract\IClientRepository.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>1.Abstractions\IClientRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_4.Items.IElementsRepository">
+    <Position X="21.75" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAMAAAAACAAAA=</HashCode>
+      <FileName>1.Abstractions\IElementsRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

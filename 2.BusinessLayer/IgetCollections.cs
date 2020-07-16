@@ -24,7 +24,7 @@ namespace _2.BusinessLayer
         clsListDirectors fncHandleListDirectors();
         // ADMINS
         // 2. fnc. load admin list
-        clsListAdmins fncHandleListAdmins();
+        clsListAdmins fncHandleListAdmins(string filter);
         // AGENCIES
         // 3. fnc.Load agency List
         clsListAgencies fncHandleListAgencies();

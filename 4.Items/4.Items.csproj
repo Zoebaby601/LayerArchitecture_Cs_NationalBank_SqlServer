@@ -64,6 +64,7 @@
     <Compile Include="2.Entities\clsUnpaidAccount.cs" />
     <Compile Include="1.Abstractions\IClientRepository.cs" />
     <Compile Include="1.Abstractions\IfncDictionary.cs" />
+    <Compile Include="1.Abstractions\IElementsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

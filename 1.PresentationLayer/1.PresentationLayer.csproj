@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationController\clsClientController.cs" />
-    <Compile Include="ViewModel\clsClientViewModel.cs" />
+    <Compile Include="ApplicationController\clsController.cs" />
     <Compile Include="Forms\Transactions.cs">
       <SubType>Form</SubType>
     </Compile>

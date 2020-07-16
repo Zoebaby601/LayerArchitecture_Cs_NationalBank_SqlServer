@@ -22,14 +22,20 @@ namespace _2.BusinessLayer
         /// <summary>
         /// 1. Obj Model -> object with the interactions with the data base
         /// </summary>
-        private clsDataSource Model = new clsDataSource();
+        // readonly la asignacion al campo solo ocurre en el constructor
+        readonly clsDataSource Model;
         /// <summary>
         /// 2. Obj myBank -> interactions with the data base
         /// </summary>
-        clsBank myBank = new clsBank();
+        // readonly la asignacion al campo solo ocurre en el constructor
+        readonly clsBank myBank;
 
-        // constructeur
-        public clsGetAdmins() { }
+        // Constructor
+        public clsGetAdmins()
+        {
+            Model = new clsDataSource();
+            myBank = new clsBank();
+        }
 
         public clsListDirectors fncHandleListDirectors()
         {
@@ -40,9 +46,9 @@ namespace _2.BusinessLayer
         /// ADMINS -> 2. fnc. load admin list
         /// </summary>
         /// <returns>myBank.vListAdmins</returns>
-        public clsListAdmins fncHandleListAdmins()
+        public clsListAdmins fncHandleListAdmins(string filter)
         {
-            myBank.vListAdmins = Model.fncGetAdmins();
+            myBank.vListAdmins = Model.fncGetAdmins(filter);
             return myBank.vListAdmins;
         }
 

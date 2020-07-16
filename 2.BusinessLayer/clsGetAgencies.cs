@@ -38,7 +38,7 @@ namespace _2.BusinessLayer
             throw new NotImplementedException();
         }
 
-        public clsListAdmins fncHandleListAdmins()
+        public clsListAdmins fncHandleListAdmins(string filter)
         {
             throw new NotImplementedException();
         }

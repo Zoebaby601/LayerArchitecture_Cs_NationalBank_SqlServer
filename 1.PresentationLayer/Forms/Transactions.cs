@@ -31,6 +31,7 @@ namespace _1.PresentationLayer
         static clsAgency myAgency = new clsAgency();
 
         private clsClientController Client;
+        private clsController Controller;
 
         // CONTROLLER
         static IabstractFactory factoryGetData = clsDataFactory.factoryData("getData");
@@ -39,10 +40,13 @@ namespace _1.PresentationLayer
         {
             InitializeComponent();
             Client = new clsClientController();
+            Controller = new clsController();
         }
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
-            gvClients.DataSource = Client.GetClientsAll(txtFiltrar.Text);
+           // gvClients.DataSource = Client.GetClientsAll(txtFiltrar.Text);
+
+            gvClients.DataSource = Controller.GetAdminsAll(txtFiltrar.Text);
         }
 
         /// <summary>
@@ -60,7 +64,7 @@ namespace _1.PresentationLayer
             // DIRECTORS
             fncLoadDirectorsList();
             // ADMINS
-            fncLoadAdminsList();
+            fncLoadAdminsList(txtFiltrar.Text);
             // AGENCIES
             fncLoadAgenciesList();
             // DIRECTORS AGENCY
@@ -87,11 +91,11 @@ namespace _1.PresentationLayer
         /// <summary>
         /// Load list Admin
         /// </summary>
-        public void fncLoadAdminsList()
+        public void fncLoadAdminsList(string filter)
         {
             // clsBusiness Controller = new clsBusiness();
             IgetCollections Controller = factoryGetData.getCollections("admins");
-            myBank.vListAdmins = Controller.fncHandleListAdmins();
+            myBank.vListAdmins = Controller.fncHandleListAdmins(filter);
         }
         /// <summary>
         /// Load list Agency

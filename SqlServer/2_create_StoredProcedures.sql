@@ -717,7 +717,7 @@ END
 -- =============================================
 -- Author:		Ricardo Mendoza
 -- Create date: 3-12-2018
--- Description:	Select clients by Number from bd_NationalBank
+-- Description:	Select clients by Condition from bd_NationalBank
 -- 20.- selectClientByCondition
 -- =============================================
 
@@ -750,3 +750,36 @@ b.idemployee as idemployee
 FROM tclient b WHERE clientNumber like @aCondition + '%' or name like @aCondition + '%' or lastName like @aCondition + '%' ORDER BY name
 END
 GO
+
+-- =============================================
+-- Author:		Ricardo Mendoza
+-- Create date: 3-12-2018
+-- Description:	Select admin by Condition from bd_NationalBank
+-- 21.- selectAdminByCondition
+-- =============================================
+USE [bd_NationalBank]
+GO
+/****** Object:  StoredProcedure [dbo].[selectAdmins]    Script Date: 8/6/2019 9:47:07 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[selectAdminByCondition]
+@aCondition VARCHAR(45) = null
+AS 
+BEGIN
+SELECT 
+b.idadmin as idadmin,
+b.adminNumber as adminNumber,
+b.name as name,
+b.lastName as lastName,
+b.email as email,
+b.img as img,
+b.password as password,
+b.sexe as sexe,
+b.active as active
+FROM tadmin b WHERE adminNumber like @aCondition + '%' or name like @aCondition + '%' or lastName like @aCondition + '%' ORDER BY name
+END
+GO
+
+--exec  selectAdminByCondition   'a'

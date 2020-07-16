@@ -113,7 +113,8 @@ namespace _3.DataAccesLayer
         }
 
         // 4 fnc.Load Admins
-        public clsListAdmins fncGetAdmins()
+        public clsListAdmins fncGetAdmins(string filter)
+        // public clsListAdmins fncGetAdmins()
         {
             try
             {
@@ -122,9 +123,12 @@ namespace _3.DataAccesLayer
                 // 2. Execute open connection
                 Command.Connection = Connection.OpenConnection();
                 // 3. Execute stored procedure
-                Command.CommandText = "selectAdmins";
+                // Command.CommandText = "selectAdmins";
+                Command.CommandText = "selectAdminByCondition";
                 // 4. Execute specify the command type
                 Command.CommandType = CommandType.StoredProcedure;
+                // 6. Execute condition
+                Command.Parameters.AddWithValue("@aCondition", filter);
                 // 5. Execute the Reader
                 Read = Command.ExecuteReader();
                 // 6. Load the list

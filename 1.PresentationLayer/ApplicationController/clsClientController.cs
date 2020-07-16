@@ -17,18 +17,18 @@ namespace _1.PresentationLayer
    */
     public class clsClientController
     {
-        public IEnumerable<clsClientViewModel> GetClientsAll(string filter)
+        public IEnumerable<clsClient> GetClientsAll(string filter)
         {
             try
             {
                 // variable de tipo implicita
                 var ClientList = new clsClientService().GetClients(filter);
                 // Instancia de Lista
-                List<clsClientViewModel> viewModel = new List<clsClientViewModel>();
+                List<clsClient> viewModel = new List<clsClient>();
                 // mapear datos
                 foreach (clsClient item in ClientList)
                 {
-                    viewModel.Add(new clsClientViewModel
+                    viewModel.Add(new clsClient
                     {
                         vId = item.vId,
                         vNumber = item.vNumber,

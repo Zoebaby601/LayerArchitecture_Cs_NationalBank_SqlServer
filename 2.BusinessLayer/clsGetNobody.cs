@@ -15,7 +15,7 @@ namespace _2.BusinessLayer
             return null;
         }
 
-        public clsListAdmins fncHandleListAdmins()
+        public clsListAdmins fncHandleListAdmins(string filter)
         {
             throw new NotImplementedException();
         }
