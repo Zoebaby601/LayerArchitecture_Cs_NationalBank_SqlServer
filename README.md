@@ -132,5 +132,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 #### Internet
  
- * [What Is Windows Communication Foundation](https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf)
+* [What Is Windows Communication Foundation](https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf)
+* [OperationContractAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.operationcontractattribute?view=dotnet-plat-ext-3.1)
+* [Designing Service Contracts](https://docs.microsoft.com/en-us/dotnet/framework/wcf/designing-service-contracts)
 
