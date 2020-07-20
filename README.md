@@ -125,3 +125,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Derek Banas - SQL Server and Visual Studio Installation
 * [Institut Teccart](http://www.teccart.qc.ca/)
 
+
+## Review
+
+### Windows Communication Foundation. 
+
+#### Internet
+ 
+ * [What Is Windows Communication Foundation](https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf)
+
