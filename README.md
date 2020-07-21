@@ -126,27 +126,56 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * [Institut Teccart](http://www.teccart.qc.ca/)
 
 
+
 ## Review
 
 ### Internet
 
-###  Types de contrat utilisés par des services WCF  =  Windows Communication Foundation. 
+### Types de contrat utilisés par des services WCF  =  Windows Communication Foundation. 
  
 * [What Is Windows Communication Foundation](https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf)
 * [Designing Service Contracts](https://docs.microsoft.com/en-us/dotnet/framework/wcf/designing-service-contracts)
 * [Contracts](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/contracts)
 
-###  1- défini chaque opération: une méthode |attribut =  OperationContractAttribute
+
+#### 1- défini chaque opération: une méthode |attribut =  OperationContractAttribute
 
 * [OperationContractAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.operationcontractattribute?view=dotnet-plat-ext-3.1)
 
-###  2- créer un contrat de service en groupant les opérations:
-	 une interface ou une classe| attribut = ServiceContractAttribute
-	 interface recommandée car 
-	- elles modèlent directement des contrats de service
-	- peuvent étendre d'autres interfaces de contrats de service
+
+#### 2- créer un contrat de service en groupant les opérations: une interface ou une classe| attribut = ServiceContractAttribute
+#### interface recommandée car 
+#####	- elles modèlent directement des contrats de service
+#####	- peuvent étendre d'autres interfaces de contrats de service
+#####	- les classes managées –> non l'héritage multiple –> 1 contrat à la fois
 	
 * [ServiceContractAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.servicecontractattribute?view=dotnet-plat-ext-3.1)
+
+
+### Paramètres et valeurs de retour.
+##### chaque opération a 1 paramètre + valeur de retour , même un void
+##### les objets ne sont pas passés par références –> passés par copies
+##### chaque type utilisé dans 1 paramètre ou valeur de retour doit être sérialisable
+##### sérialisable –> objet convertible en un flux d'octets et vice versa
+
+
+#### Contrat de données
+##### décrit les données échangées par les opérations de service
+##### Conception faite pour interagir avec le plus grand nb possible d'applications client
+##### attributs: DataContractAttribute et DataMemberAttribute
+##### a un style abonnement
+###### aucun type ou membre de données est sérialisé
+###### sauf si ses attributs sont explicitement appliqués
+##### autres attributs possibles
+###### utilise des messages SOAP pour transporter les données d'une apps à une autre
+###### ISerializable | SerializableAttribute | IXmlSerializable
+
+
+#### Mappage des paramètres et des valeurs de retour aux échanges de messages
+
+
+
+
 
 
 
