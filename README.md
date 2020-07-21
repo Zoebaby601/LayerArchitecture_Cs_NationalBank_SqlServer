@@ -128,12 +128,25 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Review
 
-### Windows Communication Foundation. 
+### Internet
 
-#### Internet
+###  Types de contrat utilisés par des services WCF  =  Windows Communication Foundation. 
  
 * [What Is Windows Communication Foundation](https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf)
-* [OperationContractAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.operationcontractattribute?view=dotnet-plat-ext-3.1)
 * [Designing Service Contracts](https://docs.microsoft.com/en-us/dotnet/framework/wcf/designing-service-contracts)
 * [Contracts](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/contracts)
+
+###  1- défini chaque opération: une méthode |attribut =  OperationContractAttribute
+
+* [OperationContractAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.operationcontractattribute?view=dotnet-plat-ext-3.1)
+
+###  2- créer un contrat de service en groupant les opérations:
+	 une interface ou une classe| attribut = ServiceContractAttribute
+	 interface recommandée car 
+	- elles modèlent directement des contrats de service
+	- peuvent étendre d'autres interfaces de contrats de service
+	
+* [ServiceContractAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.servicemodel.servicecontractattribute?view=dotnet-plat-ext-3.1)
+
+
 
