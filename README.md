@@ -161,7 +161,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ##### sérialisable –> objet convertible en un flux d'octets et vice versa
 
 
-#### Contrat de données
+### Contrat de données
 ##### décrit les données échangées par les opérations de service
 ##### Conception faite pour interagir avec le plus grand nb possible d'applications client
 ##### attributs: DataContractAttribute et DataMemberAttribute
@@ -173,7 +173,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ###### ISerializable | SerializableAttribute | IXmlSerializable
 
 
-#### Mappage des paramètres et des valeurs de retour aux échanges de messages.
+### Mappage des paramètres et des valeurs de retour aux échanges de messages.
 ###### utilise des messages SOAP.
 ###### 3 modèles possibles.
 ####### demande/réponse: échange de message par défaut | string Hello(string greeting)
@@ -183,12 +183,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ######## - bidirectionnelle et asynchrone | CallbackContract
 
 
-#### Paramètres in |Out | Ref.
+### Paramètres in |Out | Ref.
 ###### in.
 ###### Out et Ref -> données retournées à partir d'une opération.
 
 
-#### Niveau de protection des messages sur un contrat
+### Niveau de protection des messages sur un contrat
 ###### valeurs possibles spécifiant si les messages sont
 ####### signés 
 ####### signés et chiffrés | GetString | GetGuide | valeurs par défaut des messages
@@ -196,7 +196,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ###### Ex: Public Interface IExplicitProtectionLevelSampleService
 
 
-#### Résumée
+### Résumée
 ###### Service Contract | Data Contract | Message Contract | Fault Contract
 
 
