@@ -155,49 +155,49 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 ### Paramètres et valeurs de retour.
-##### chaque opération a 1 paramètre + valeur de retour , même un void
-##### les objets ne sont pas passés par références –> passés par copies
-##### chaque type utilisé dans 1 paramètre ou valeur de retour doit être sérialisable
-##### sérialisable –> objet convertible en un flux d'octets et vice versa
+#### chaque opération a 1 paramètre + valeur de retour , même un void
+#### les objets ne sont pas passés par références –> passés par copies
+#### chaque type utilisé dans 1 paramètre ou valeur de retour doit être sérialisable
+#### sérialisable –> objet convertible en un flux d'octets et vice versa
 
 
 ### Contrat de données
-##### décrit les données échangées par les opérations de service
-##### Conception faite pour interagir avec le plus grand nb possible d'applications client
-##### attributs: DataContractAttribute et DataMemberAttribute
-##### a un style abonnement
-###### aucun type ou membre de données est sérialisé
-###### sauf si ses attributs sont explicitement appliqués
-##### autres attributs possibles
-###### utilise des messages SOAP pour transporter les données d'une apps à une autre
-###### ISerializable | SerializableAttribute | IXmlSerializable
+#### décrit les données échangées par les opérations de service
+#### Conception faite pour interagir avec le plus grand nb possible d'applications client
+#### attributs: DataContractAttribute et DataMemberAttribute
+#### a un style abonnement
+##### aucun type ou membre de données est sérialisé
+##### sauf si ses attributs sont explicitement appliqués
+#### autres attributs possibles
+##### utilise des messages SOAP pour transporter les données d'une apps à une autre
+##### ISerializable | SerializableAttribute | IXmlSerializable
 
 
 ### Mappage des paramètres et des valeurs de retour aux échanges de messages.
-###### utilise des messages SOAP.
-###### 3 modèles possibles.
-####### demande/réponse: échange de message par défaut | string Hello(string greeting)
-####### unidirectionnel:  n'attend pas que l'opération se termine | void Hello( string X )
-####### duplex
-######## - service et client s'envoient des messages l'un à l'autre
-######## - bidirectionnelle et asynchrone | CallbackContract
+#### utilise des messages SOAP.
+#### 3 modèles possibles.
+##### demande/réponse: échange de message par défaut | string Hello(string greeting)
+##### unidirectionnel:  n'attend pas que l'opération se termine | void Hello( string X )
+##### duplex
+###### - service et client s'envoient des messages l'un à l'autre
+###### - bidirectionnelle et asynchrone | CallbackContract
 
 
 ### Paramètres in |Out | Ref.
-###### in.
-###### Out et Ref -> données retournées à partir d'une opération.
+#### in.
+#### Out et Ref -> données retournées à partir d'une opération.
 
 
 ### Niveau de protection des messages sur un contrat
-###### valeurs possibles spécifiant si les messages sont
-####### signés 
-####### signés et chiffrés | GetString | GetGuide | valeurs par défaut des messages
-####### sans signature ou chiffrement | GetInt
-###### Ex: Public Interface IExplicitProtectionLevelSampleService
+#### valeurs possibles spécifiant si les messages sont
+##### signés 
+##### signés et chiffrés | GetString | GetGuide | valeurs par défaut des messages
+##### sans signature ou chiffrement | GetInt
+#### Ex: Public Interface IExplicitProtectionLevelSampleService
 
 
 ### Résumée
-###### Service Contract | Data Contract | Message Contract | Fault Contract
+#### Service Contract | Data Contract | Message Contract | Fault Contract
 
 
 
