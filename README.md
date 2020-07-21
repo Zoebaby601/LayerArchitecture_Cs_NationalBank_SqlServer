@@ -127,7 +127,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 
-## Review
+## Concepts.
+
+## 002 WCF.
 
 ### Internet
 
@@ -171,7 +173,34 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ###### ISerializable | SerializableAttribute | IXmlSerializable
 
 
-#### Mappage des paramètres et des valeurs de retour aux échanges de messages
+#### Mappage des paramètres et des valeurs de retour aux échanges de messages.
+###### utilise des messages SOAP.
+###### 3 modèles possibles.
+####### demande/réponse: échange de message par défaut | string Hello(string greeting)
+####### unidirectionnel:  n'attend pas que l'opération se termine | void Hello( string X )
+####### duplex
+######## - service et client s'envoient des messages l'un à l'autre
+######## - bidirectionnelle et asynchrone | CallbackContract
+
+
+#### Paramètres in |Out | Ref.
+###### in.
+###### Out et Ref -> données retournées à partir d'une opération.
+
+
+#### Niveau de protection des messages sur un contrat
+###### valeurs possibles spécifiant si les messages sont
+####### signés 
+####### signés et chiffrés | GetString | GetGuide | valeurs par défaut des messages
+####### sans signature ou chiffrement | GetInt
+###### Ex: Public Interface IExplicitProtectionLevelSampleService
+
+
+#### Résumée
+###### Service Contract | Data Contract | Message Contract | Fault Contract
+
+
+
 
 
 
