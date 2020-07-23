@@ -186,7 +186,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ### Paramètres in |Out | Ref.
 #### in.
 #### Out et Ref -> données retournées à partir d'une opération.
-* [Methods can be overloaded when one method has a ref, in, or out parameter and the other has a value parameter](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)
+* [Passing an argument by reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)
+* [Variables por valor o por referencia](https://csharp.com.es/variables-por-valor-o-por-referencia/)
 
 
 ### Niveau de protection des messages sur un contrat
