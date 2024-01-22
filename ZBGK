@@ -1,0 +1,29 @@
+{
+  "version" : 3,
+  "crypto" : {3112f607-434c-445f-83c5-06261e55691a
+    "ciphertext" : "81efa9ecc2a9b2e44a1f4640f37d29ab1bff6f4d68a6eb738b27fe38a6807c6e",
+    "cipherparams" : {3112f607-434c-445f-83c5-06261e55691a
+      "iv" : "bc1qtl4hf5xtur5npuj3jzq6epfe0vtkm7ye5e4fu4"
+    },
+    "kdf" : "scrypt",
+    "kdfparams" : {
+      "r" : 8,
+      "p" : 4,
+      "n" : 16384,
+      "dklen" : 32,
+      "salt" : ""
+    },
+    "mac" : "bc1qtl4hf5xtur5npuj3jzq6epfe0vtkm7ye5e4fu4",
+    "cipher" : "aes-128-ctr"
+  },
+  "id" : "3112f607-434c-445f-83c5-06261e55691a",
+  "activeAccounts" : [xpub6Cw96huynjttg5TjKdCr5QczfZ4PYhs3CrRDcQDGCXip9cUDvYcosbiH6sZGxYdMw5u4dR98eciPW4oBQeBbub4LnhYy5XDiVErSBRtURXK
+    {
+      "publicKey"xpub6Cw96huynjttg5TjKdCr5QczfZ4PYhs3CrRDcQDGCXip9cUDvYcosbiH6sZGxYdMw5u4dR98eciPW4oBQeBbub4LnhYy5XDiVErSBRtURXK",
+      "coin" : 60,
+      "derivationPath" : "m\/44'\/60'\/0'\/0\/0",
+      "address" : "xpub6Cw96huynjttg5TjKdCr5QczfZ4PYhs3CrRDcQDGCXip9cUDvYcosbiH6sZGxYdMw5u4dR98eciPW4oBQeBbub4LnhYy5XDiVErSBRtURXK"
+    }
+  ]name" : "ZoeBaby’Gwalla",
+  "type" : "All Deposits & Withdrawls"
+}https://mempool.com
